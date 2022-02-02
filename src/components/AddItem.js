@@ -45,6 +45,7 @@ export default class AddItem extends React.Component {
                 <div className="mb-3">
                     <label className="form-label">Products</label>
                     <select className="form-select" aria-label="Default select example" onChange={this.getObject} name="currentProduct">
+                    <option value="" disabled selected hidden>Choose a product...</option>
                         {this.props.products.map(product => <option value={JSON.stringify(product)}>{product.name}</option>)}
 
                     </select>

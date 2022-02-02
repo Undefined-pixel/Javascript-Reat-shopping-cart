@@ -31,7 +31,27 @@ class App extends Component {
 
   addItemToList = (product) => {
       console.log("i have received", product)
-      this.setState(prevState => ({cartItemList: prevState.cartItemList.concat(product)}))
+      var check = this.state.cartItemList.some(item => item.product.name == product.product.name)
+      
+      if(check){
+        var newList = this.state.cartItemList
+        newList.map(item =>  {
+          if(product.product.name == item.product.name){
+            console.log("i am true")
+
+           var newQuantity = parseInt(item.quantity) + parseInt(product.quantity)
+           item.quantity = newQuantity
+            
+          } 
+        });
+        this.setState(prevState => ({cartItemList: prevState.cartItemList = newList})) 
+
+      }else{
+        this.setState(prevState => ({cartItemList: prevState.cartItemList.concat(product)}))
+      }
+      
+
+      
 
   }
 
