@@ -25,6 +25,8 @@ class CartItems extends Component {
 
                 </div>
 
+                <label> Total:  {`$${this.props.total / 100}`}</label>
+
                 <div>
                     
                     <AddItem products={this.props.products.products} 

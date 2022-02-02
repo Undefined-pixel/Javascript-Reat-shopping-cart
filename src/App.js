@@ -29,6 +29,22 @@ class App extends Component {
       ]
   }
 
+ total = 0;
+
+  getTotal = (cart) => {
+    /* const total = cart.reduce((pv, cv) => { 
+        pv += (parseInt(cv.product.priceInCents) * parseInt(cv.quantity))
+          }, 0);*/
+      var sum = 0;
+      for(var i = 0; i < cart.length; i++){
+        sum += parseInt(cart[i].product.priceInCents) * parseInt(cart[i].quantity)
+        
+      }
+
+       this.total = sum;
+
+  }
+
   addItemToList = (product) => {
       console.log("i have received", product)
       var check = this.state.cartItemList.some(item => item.product.name == product.product.name)
@@ -49,17 +65,15 @@ class App extends Component {
       }else{
         this.setState(prevState => ({cartItemList: prevState.cartItemList.concat(product)}))
       }
-      
 
-      
-
-  }
+    this.getTotal(this.state.cartItemList);
+ }
 
   render() {
     return (
       <div>
         <CartHeader />
-        <CartItems products={this.state} addItemToList={this.addItemToList}/>
+        <CartItems products={this.state} addItemToList={this.addItemToList} total={this.total}/>
         <CartFooter copyright="2016" />
 
       </div>
