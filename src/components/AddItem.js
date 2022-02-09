@@ -26,7 +26,7 @@ export default class AddItem extends React.Component {
     addProduct = (e) => {
         e.preventDefault();
         var tempProduct = {
-            id: this.props.cartItemList.length +1,
+            
             product: this.state.currentProduct,
             quantity: this.state.currentQuantity
         }
@@ -46,7 +46,7 @@ export default class AddItem extends React.Component {
                     <label className="form-label">Products</label>
                     <select className="form-select" aria-label="Default select example" onChange={this.getObject} name="currentProduct">
                     <option value="" disabled selected hidden>Choose a product...</option>
-                        {this.props.products.map(product => <option value={JSON.stringify(product)}>{product.name}</option>)}
+                        {this.props.products.map( product => <option value={JSON.stringify(product)}>{product.name}</option>)}
 
                     </select>
                     <button className="btn btn-primary" onClick={this.addProduct}>Submit</button>
