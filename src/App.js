@@ -69,7 +69,7 @@ class App extends Component {
       id: product.product.id
     }
 
-   const response = await fetch("http://localhost:8082/api/items", {
+   const response = await fetch(`${process.env.REACT_APP_API_URL}/api/items`, {
       method:'POST',
       body: JSON.stringify(fetchProduct),
       
