@@ -8,10 +8,7 @@ and was developed together with **Chessinator**.
 
 ---
 ## 🖼️ Screenshots
-```markdown
-<![App Screenshot](./screenshot.png)
-```
-
+![Shopping Cart](screenshot.png)  
 ---
 
 ## 🚀 Project Description
@@ -20,7 +17,7 @@ The **Shopping Cart App** simulates a simple online store where users can view p
 The main focus was to understand the core concepts of React, including:
 
 - Component structure and props  
-- State management (`useState` or `useReducer`)  
+- State management  
 - Data flow between components  
 - Dynamic rendering logic  
 
