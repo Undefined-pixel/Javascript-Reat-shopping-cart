@@ -51,8 +51,6 @@ npm start
 Then open your browser and visit  
 👉 **http://localhost:3000**
 
-# Then open your browser and visit  
-
 ## You need to run this Backend for the App
 
 [Backend](https://github.com/Undefined-pixel/Javascript-Galavernize-Backend)
