@@ -90,12 +90,10 @@ class App extends Component {
       <div>
         <CartHeader />
         <CartItems products={this.state} addItemToList={this.addItemToList} total={this.total} />
-        <CartFooter copyright="2016" />
-
+        <CartFooter copyright="2025" />
       </div>
     )
   };
-
 
 }
 
